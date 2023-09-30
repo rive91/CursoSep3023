@@ -7,7 +7,7 @@ public class PruebaSelenium {
 
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.cooltesers.com");
+		driver.get("https://www.test.com");
 
 	}
 
