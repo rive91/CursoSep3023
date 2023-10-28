@@ -6,6 +6,5 @@ public class GlobalVariables {
 	public static final String STANDARD_USER = "standard_user";
 	public static final String STANDAR_PASSWORD = "secret_sauce";
 	public static final String LOCK_USER = "locked_out_user";
-	public static final String PATH_EXCEL_DATA = "./src/test/resources/";
-
+	public static final String TEST_DATA = "./src/test/resources/testData/";
 }

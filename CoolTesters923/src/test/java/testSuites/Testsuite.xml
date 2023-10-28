@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RegressionAutomatedQA" parallel="tests" thread-count="3">
+
+  <test name="TC01_Login">
+
+    <classes>
+      <class name="loginTests.TC01_Login"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="TC02_Login_Lock">
+
+    <classes>
+      <class name="loginTests.TC02_Login_Lock"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test name="TC03_VerifyRemoveBtn">
+
+    <classes>
+      <class name="inventoryTests.TC03_VerifyRemoveBtn"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

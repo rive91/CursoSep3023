@@ -1,4 +1,4 @@
-package loginTests;
+package inventoryTests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -9,15 +9,17 @@ import org.testng.annotations.Test;
 import commonClasses.DriverSetup;
 import commonClasses.GlobalVariables;
 import commonClasses.WrapClass;
+import navigationPages.InventoryPage;
 import navigationPages.LoginPage;
 
-public class TC02_Login_Lock {
+public class TC03_VerifyRemoveBtn {
 	
 	//Declarar e inicializar el WebDriver
 	WebDriver driver = DriverSetup.setDriver();
 	
 	//PageObjects
 	LoginPage loginPage = new LoginPage(driver);
+	InventoryPage inventory = new InventoryPage(driver);
 	
 	@BeforeTest
 	public void startWebPage() {
@@ -25,15 +27,15 @@ public class TC02_Login_Lock {
 	}
 
 	@Test
-	public void TC02() {
-		loginPage.login(GlobalVariables.LOCK_USER, GlobalVariables.STANDAR_PASSWORD);
-		boolean error = loginPage.validateLockedError();
-		Assert.assertTrue(error);
+	public void TC03() {
+		loginPage.login(GlobalVariables.STANDARD_USER, GlobalVariables.STANDAR_PASSWORD);
+		boolean isBtnDisplayed = inventory.addToCartAnVerifyRemoveBtn();
+		Assert.assertTrue(isBtnDisplayed);
 	}
 	
 	@AfterTest
 	public void closeDriver() {
-		WrapClass.takeScrenshot(driver, "TC02_Login_Lock");
+		WrapClass.takeScrenshot(driver, "TC03_VerifyRemoveBtn");
 		driver.quit();
 	}
 }
